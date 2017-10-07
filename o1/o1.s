@@ -18,22 +18,28 @@ Start:
 		LDR R2, =BUTTON_PORT
 		MUL R2, R1, R2
 		ADD R2, R2, R0 // address button port
-
 		LDR R3, =GPIO_PORT_DIN
 		ADD R4, R2, R3 // address button din
 
-		LDR R3, =GPIO_PORT_DOUTSET
-		ADD R5, R2, R3 // address doutset
+
+		LDR R2, =LED_PORT
+		MUL R2, R1, R2
+		ADD R2, R2, R0 // address led prot
 
 		LDR R3, =GPIO_PORT_DOUTCLR
 		ADD R6, R2, R3 // address doutclr
 
+		LDR R3, =GPIO_PORT_DOUTSET
+		ADD R5, R2, R3 // address doutset
+
 
 		// set R0 input from button
-		LDR R0, =1 << BUTTON_PIN
+		LDR R0, =#1 << BUTTON_PIN
 
 		// set R1 output at led
-		LDR R1, =1 << LED_PIN
+		LDR R1, =#1 << LED_PIN
+
+		B LOOP
 
 
 
@@ -41,7 +47,8 @@ LOOP:
 		LDR R2, [R4]
 		AND R2, R2, R0
 		CMP R2, R0
-		BEQ LedOn
+		BNE LedOn
+		B LedOff
 
 LedOff:
 		STR R1, [R6]
