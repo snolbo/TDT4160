@@ -531,7 +531,7 @@ END GROUP
 LOAD c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtend.o
 LOAD c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
 
-.text           0x00000000     0x2938
+.text           0x00000000     0x2934
  *(.vectors)
  .vectors       0x00000000       0xdc build/startup_efm32gg.o
                 0x00000000                __Vectors
@@ -761,29 +761,29 @@ LOAD c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/
                 0x0000240c                DMA_IRQHandler
                 0x0000240c                BusFault_Handler
                 0x0000240c                USART2_TX_IRQHandler
- .text          0x00002410       0xc4 build/o2.o
+ .text          0x00002410       0xc0 build/o2.o
                 0x00002410                Start
-                0x00002448                SysTick_Handler
-                0x0000247e                GPIO_ODD_IRQHandler
- .text.exit     0x000024d4       0x28 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-exit.o)
-                0x000024d4                exit
+                0x00002446                SysTick_Handler
+                0x0000247c                GPIO_ODD_IRQHandler
+ .text.exit     0x000024d0       0x28 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-exit.o)
+                0x000024d0                exit
  .text.__libc_init_array
-                0x000024fc       0x4c c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-init.o)
-                0x000024fc                __libc_init_array
- .text.memset   0x00002548       0x10 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memset.o)
-                0x00002548                memset
- .text.strlen   0x00002558       0x10 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-strlen.o)
-                0x00002558                strlen
- .text._exit    0x00002568        0x4 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)
-                0x00002568                _exit
+                0x000024f8       0x4c c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-init.o)
+                0x000024f8                __libc_init_array
+ .text.memset   0x00002544       0x10 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memset.o)
+                0x00002544                memset
+ .text.strlen   0x00002554       0x10 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-strlen.o)
+                0x00002554                strlen
+ .text._exit    0x00002564        0x4 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)
+                0x00002564                _exit
  *(.init)
- .init          0x0000256c        0x4 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
-                0x0000256c                _init
- .init          0x00002570        0x8 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
+ .init          0x00002568        0x4 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
+                0x00002568                _init
+ .init          0x0000256c        0x8 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
  *(.fini)
- .fini          0x00002578        0x4 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
-                0x00002578                _fini
- .fini          0x0000257c        0x8 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
+ .fini          0x00002574        0x4 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
+                0x00002574                _fini
+ .fini          0x00002578        0x8 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -796,59 +796,59 @@ LOAD c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/
  *(.dtors)
  *(.rodata*)
  .rodata.EFM_Display
-                0x00002584      0x1fe build/segmentlcd.o
- *fill*         0x00002782        0x2 
+                0x00002580      0x1fe build/segmentlcd.o
+ *fill*         0x0000277e        0x2 
  .rodata.EFM_Alphabet
-                0x00002784       0xb8 build/segmentlcd.o
+                0x00002780       0xb8 build/segmentlcd.o
  .rodata.lcdInit
-                0x0000283c       0x14 build/segmentlcd.o
- .rodata        0x00002850       0x3d build/em_cmu.o
- *fill*         0x0000288d        0x3 
- .rodata        0x00002890       0x3e build/em_gpio.o
- *fill*         0x000028ce        0x2 
- .rodata        0x000028d0       0x1d build/em_rtc.o
- *fill*         0x000028ed        0x3 
- .rodata        0x000028f0       0x20 build/em_system.o
- .rodata        0x00002910       0x1d build/em_lcd.o
+                0x00002838       0x14 build/segmentlcd.o
+ .rodata        0x0000284c       0x3d build/em_cmu.o
+ *fill*         0x00002889        0x3 
+ .rodata        0x0000288c       0x3e build/em_gpio.o
+ *fill*         0x000028ca        0x2 
+ .rodata        0x000028cc       0x1d build/em_rtc.o
+ *fill*         0x000028e9        0x3 
+ .rodata        0x000028ec       0x20 build/em_system.o
+ .rodata        0x0000290c       0x1d build/em_lcd.o
  .rodata.str1.1
-                0x0000292d        0x2 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
- *fill*         0x0000292f        0x1 
+                0x00002929        0x2 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
+ *fill*         0x0000292b        0x1 
  .rodata._global_impure_ptr
-                0x00002930        0x4 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
-                0x00002930                _global_impure_ptr
+                0x0000292c        0x4 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
+                0x0000292c                _global_impure_ptr
  *(.eh_frame*)
- .eh_frame      0x00002934        0x0 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
- .eh_frame      0x00002934        0x4 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtend.o
+ .eh_frame      0x00002930        0x0 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
+ .eh_frame      0x00002930        0x4 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtend.o
 
-.glue_7         0x00002938        0x0
+.glue_7         0x00002934        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x00002938        0x0
+.glue_7t        0x00002934        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x00002938        0x0
+.vfp11_veneer   0x00002934        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x00002938        0x0
+.v4_bx          0x00002934        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x00002938        0x0
+.iplt           0x00002934        0x0
  .iplt          0x00000000        0x0 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00002938                __exidx_start = .
+                0x00002934                __exidx_start = .
 
-.ARM.exidx      0x00002938        0x8
+.ARM.exidx      0x00002934        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x00002938        0x8 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
-                0x00002940                __exidx_end = .
-                0x00002940                __etext = .
+ .ARM.exidx     0x00002934        0x8 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+                0x0000293c                __exidx_end = .
+                0x0000293c                __etext = .
 
-.rel.dyn        0x00002940        0x0
+.rel.dyn        0x0000293c        0x0
  .rel.iplt      0x00000000        0x0 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
 
-.data           0x20000000       0x74 load address 0x00002940
+.data           0x20000000       0x74 load address 0x0000293c
                 0x20000000                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -882,10 +882,10 @@ LOAD c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/
                 0x20000074                . = ALIGN (0x4)
                 0x20000074                __data_end__ = .
 
-.igot.plt       0x20000074        0x0 load address 0x000029b4
+.igot.plt       0x20000074        0x0 load address 0x000029b0
  .igot.plt      0x00000000        0x0 c:/siliconlabs/simplicitystudio/v3/developer/toolchains/gnu_arm/4.8_2013q4/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
 
-.bss            0x20000074       0x34 load address 0x000029b4
+.bss            0x20000074       0x34 load address 0x000029b0
                 0x20000074                . = ALIGN (0x4)
                 0x20000074                __bss_start__ = .
  *(.bss*)

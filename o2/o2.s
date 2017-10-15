@@ -9,7 +9,7 @@
 
 Start:
 	// Set up LOAD
-	ldr r1, =FREQUENCY / 10
+	ldr r1, =FREQUENCY / 10 // get freq needed for tenth of a sec
 	ldr r0, =SYSTICK_BASE + SYSTICK_LOAD
 	str r1, [r0]
 
@@ -17,7 +17,7 @@ Start:
 	ldr r0, =SYSTICK_BASE + SYSTICK_VAL
 	str r1, [r0]
 
-	// Set up clock
+	// Set up clock using masks
 	ldr r0, =SYSTICK_BASE + SYSTICK_CTRL
 	ldr r1, =SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk
 	str r1, [r0]
@@ -29,11 +29,12 @@ Start:
 	orr r1, 0b0001 << 4
 	str r1, [r0]
 
+	// set interrupt on pin 9 to be on press in
 	ldr r0, =GPIO_BASE+GPIO_EXTIFALL
 	ldr r1, [r0]
 	orr r1, 1 << BUTTON_PIN
 	str r1, [r0]
-
+	// Interrupt enable on button pin
 	ldr r0, =GPIO_BASE+GPIO_IEN
 	ldr r1, [r0]
 	orr r1, 1 << BUTTON_PIN
@@ -72,6 +73,7 @@ SysTick_Handler:
 	ldr r2, [r5]
 	add r2, #1
 
+// Functions for incrementing tenths, secs and mins
 SysTick_Minutes:
 	str r2, [r5]
 SysTick_Seconds:
@@ -80,6 +82,7 @@ SysTick_Tenths:
 	str r0, [r3]
 	bx lr
 
+// Odd handler bacause button pin 9 i odd
 .global GPIO_ODD_IRQHandler
 .thumb_func
 GPIO_ODD_IRQHandler:
