@@ -22,4 +22,18 @@ void time_to_string(char *timestamp, int h, int m, int s);
 // Prototyper
 // legg prototyper for dine funksjoner her
 
+#define SETSEC 0
+#define SETMIN 1
+#define SETHR 2
+#define COUNTDOWN 3
+#define ALARM 4
+
+void startClock();
+void stpoClock();
+void setFlag(volatile word *w, int pin, word flag);
+void initializeIO();
+void updateDisplay();
+void tickTime();
+
+
 #endif
